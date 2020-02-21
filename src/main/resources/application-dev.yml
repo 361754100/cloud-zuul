@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: cloud-zuul
+server:
+  port: 9091
+
+zuul:
+  routes:
+    member_api:
+      path: /member/**
+      url: http://localhost:8089/member
+    verify_api:
+      path: /verify/**
+      url: http://localhost:8086/verify
